@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "emptyExample.app"
+               BuildableName = "exampleRibbon.app"
                BlueprintName = "exampleRibbon"
                ReferencedContainer = "container:exampleRibbon.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "emptyExample.app"
+            BuildableName = "exampleRibbon.app"
             BlueprintName = "exampleRibbon"
             ReferencedContainer = "container:exampleRibbon.xcodeproj">
          </BuildableReference>
@@ -44,14 +44,13 @@
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
-      ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "emptyExample.app"
+            BuildableName = "exampleRibbon.app"
             BlueprintName = "exampleRibbon"
             ReferencedContainer = "container:exampleRibbon.xcodeproj">
          </BuildableReference>
@@ -69,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "emptyExample.app"
+            BuildableName = "exampleRibbon.app"
             BlueprintName = "exampleRibbon"
             ReferencedContainer = "container:exampleRibbon.xcodeproj">
          </BuildableReference>

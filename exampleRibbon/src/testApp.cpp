@@ -1,15 +1,3 @@
-/**
- *
- * OFDevCon Example Code Sprint
- * Camera Ribbon example
- * This example generates ribbons along the mouse trail that descend in space
- * When you click space bar, you can
- *
- * Created by James George for openFrameworks workshop at Waves Festival Vienna sponsored by Lichterloh and Pratersauna
- * Adapted during ofDevCon on 2/23/2012
- */
-
-
 #include "testApp.h"
 
 //--------------------------------------------------------------
@@ -18,17 +6,20 @@ void testApp::setup(){
     ofSetFrameRate(60);
     ofSetVerticalSync(true);
     ofBackground(255);
-		
+    
 	//initialize the variable so it's off at the beginning
     usecamera = false;
     
+    
+    idx = 0;
+    
     retro.setup(ofGetWidth(), ofGetHeight());
-    screen.allocate(ofGetWidth(), ofGetHeight());    
+    screen.allocate(ofGetWidth(), ofGetHeight());
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-	//don't move the points if we are using the camera
+    //don't move the points if we are using the camera
     if(!usecamera){
         ofVec3f sumOfAllPoints(0,0,0);
         for(int i = 0; i < points.size(); i++){
@@ -39,13 +30,13 @@ void testApp::update(){
     }
     
     screen.begin();
-    ofClear(0);   
+    ofClear(0);
     
     ofPushStyle();
     ofSetColor(ofColor::black);
     ofRect(0, 0, ofGetWidth(), ofGetHeight());
     ofPopStyle();
-        
+    
 	//if we're using the camera, start it.
 	//everything that you draw between begin()/end() shows up from the view of the camera
     if(usecamera){
@@ -56,14 +47,14 @@ void testApp::update(){
 	ofSetColor(ofColor::white);
 	//do the same thing from the first example...
     ofMesh mesh;
-	mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP); 
+	mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
 	for(int i = 1; i < points.size(); i++){
 		
 		//find this point and the next point
 		ofVec3f thisPoint = points[i-1];
 		ofVec3f nextPoint = points[i];
 		
-		//get the direction from one to the next. 
+		//get the direction from one to the next.
 		//the ribbon should fan out from this direction
 		ofVec3f direction = (nextPoint - thisPoint);
 		
@@ -74,12 +65,12 @@ void testApp::update(){
 		//and are really useful for representing directions as opposed to something with length
 		ofVec3f unitDirection = direction.normalized();
 		
-		//find both directions to the left and to the right 
+		//find both directions to the left and to the right
 		ofVec3f toTheLeft = unitDirection.getRotated(-90, ofVec3f(0,0,1));
 		ofVec3f toTheRight = unitDirection.getRotated(90, ofVec3f(0,0,1));
 		
 		//use the map function to determine the distance.
-		//the longer the distance, the narrower the line. 
+		//the longer the distance, the narrower the line.
 		//this makes it look a bit like brush strokes
 		float thickness = ofMap(distance, 0, 60, 100, 2, true);
 		
@@ -103,21 +94,17 @@ void testApp::update(){
     	camera.end();
     }
     
-    screen.end();     
-    
+    screen.end();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
 	
-    retro.draw(screen.getTextureReference(), 26, true, true);    
-    
+    retro.draw(screen.getTextureReference(), 26, true, true);
 }
 
 //--------------------------------------------------------------
-int idx = 0;
 void testApp::keyPressed(int key){
-
     if (key == 's')
     {
         idx++;
@@ -153,36 +140,36 @@ void testApp::mouseMoved(int x, int y ){
 	//otherwise add points like before
     else{
         ofVec3f mousePoint(x,y,0);
-        points.push_back(mousePoint);        
+        points.push_back(mousePoint);
     }
 }
 
 //--------------------------------------------------------------
 void testApp::mouseDragged(int x, int y, int button){
-    
+
 }
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-    
+
 }
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(int x, int y, int button){
-    
+
 }
 
 //--------------------------------------------------------------
 void testApp::windowResized(int w, int h){
-    
+
 }
 
 //--------------------------------------------------------------
 void testApp::gotMessage(ofMessage msg){
-    
+
 }
 
 //--------------------------------------------------------------
 void testApp::dragEvent(ofDragInfo dragInfo){ 
-    
+
 }
