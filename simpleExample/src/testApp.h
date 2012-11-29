@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxRetroPixel.h"
-
+#include "Particle.h"
 
 class testApp : public ofBaseApp{
 
@@ -21,20 +21,13 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-    //this holds all of our points
-    vector<ofVec3f> points;
-    //this keeps track of the center of all the points
-    ofVec3f center;
+        vector<Particle> particles;
     
-	//our camera objects for looking at the scene from multiple perspectives
-	ofCamera camera;
-	
-	//if usecamera is true, we'll turn on the camera view
-    bool usecamera;
-    int idx;
+        ofxRetroPixel retro;
+        ofFbo screen;
     
-private:
-    
-    ofxRetroPixel retro;
-    ofFbo screen;
+        int pixelSize;
+        bool bUseShader;
+        bool bAddGrid;
+        int gridLineWidth;
 };
