@@ -1,7 +1,7 @@
-#include "testApp.h"
+#include "ofApp.h"
 
-//--------------------------------------------------------------
-void testApp::setup(){
+void ofApp::setup()
+{
     ofSetFrameRate(60);
     ofSetVerticalSync(true);
     ofBackground(255);
@@ -20,16 +20,15 @@ void testApp::setup(){
     gridLineWidth = 2;
 }
 
-//--------------------------------------------------------------
-void testApp::update(){
+void ofApp::update()
+{
     for(int i=0; i<particles.size(); i++) {
         particles[i].update();
     }
 }
 
-//--------------------------------------------------------------
-void testApp::draw(){
-
+void ofApp::draw()
+{
     screen.begin();
     ofClear(0);
     
@@ -40,7 +39,7 @@ void testApp::draw(){
     
     screen.draw(0, 0);
     
-
+    
     retro.draw(screen.getTextureReference(), pixelSize, bUseShader, bAddGrid, gridLineWidth);
     
     
@@ -55,13 +54,8 @@ void testApp::draw(){
     ofDrawBitmapString(message.str(), 10, 20);
 }
 
-//--------------------------------------------------------------
-void testApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void testApp::keyReleased(int key){
+void ofApp::keyReleased(int key)
+{
     switch(key) {
         case OF_KEY_UP:
             if(pixelSize < 100) pixelSize+=2;
@@ -84,37 +78,11 @@ void testApp::keyReleased(int key){
     }
 }
 
-//--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
-
-}
+void ofApp::keyPressed(int key){}
+void ofApp::mouseMoved(int x, int y){}
+void ofApp::mouseDragged(int x, int y, int button){}
+void ofApp::mousePressed(int x, int y, int button){}
+void ofApp::mouseReleased(int x, int y, int button){}
+void ofApp::windowResized(int w, int h){}
+void ofApp::gotMessage(ofMessage msg){}
+void ofApp::dragEvent(ofDragInfo dragInfo){}

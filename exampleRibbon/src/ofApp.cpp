@@ -1,8 +1,8 @@
-#include "testApp.h"
+#include "ofApp.h"
 
-//--------------------------------------------------------------
-void testApp::setup(){
-	//just set up the openFrameworks stuff
+void ofApp::setup()
+{
+    //just set up the openFrameworks stuff
     ofSetFrameRate(60);
     ofSetVerticalSync(true);
     ofBackground(255);
@@ -17,8 +17,8 @@ void testApp::setup(){
     screen.allocate(ofGetWidth(), ofGetHeight());
 }
 
-//--------------------------------------------------------------
-void testApp::update(){
+void ofApp::update()
+{
     //don't move the points if we are using the camera
     if(!usecamera){
         ofVec3f sumOfAllPoints(0,0,0);
@@ -97,14 +97,13 @@ void testApp::update(){
     screen.end();
 }
 
-//--------------------------------------------------------------
-void testApp::draw(){
-	
+void ofApp::draw()
+{
     retro.draw(screen.getTextureReference(), 26, true, true);
 }
 
-//--------------------------------------------------------------
-void testApp::keyPressed(int key){
+void ofApp::keyPressed(int key)
+{
     if (key == 's')
     {
         idx++;
@@ -119,15 +118,15 @@ void testApp::keyPressed(int key){
     }
 }
 
-//--------------------------------------------------------------
-void testApp::keyReleased(int key){
+void ofApp::keyReleased(int key)
+{
 	//hitting any key swaps the camera view
     if (key != 's')
         usecamera = !usecamera;
 }
 
-//--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
+void ofApp::mouseMoved(int x, int y)
+{
 	//if we are using the camera, the mouse moving should rotate it around the whole sculpture
     if(usecamera){
         float rotateAmount = ofMap(ofGetMouseX(), 0, ofGetWidth(), 0, 360);
@@ -144,32 +143,9 @@ void testApp::mouseMoved(int x, int y ){
     }
 }
 
-//--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
-
-}
+void ofApp::mouseDragged(int x, int y, int button){}
+void ofApp::mousePressed(int x, int y, int button){}
+void ofApp::mouseReleased(int x, int y, int button){}
+void ofApp::windowResized(int w, int h){}
+void ofApp::gotMessage(ofMessage msg){}
+void ofApp::dragEvent(ofDragInfo dragInfo){}

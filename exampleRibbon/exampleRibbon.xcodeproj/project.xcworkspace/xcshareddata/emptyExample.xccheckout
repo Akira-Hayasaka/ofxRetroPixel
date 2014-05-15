@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D6278AC4-106A-487A-BEF8-4124B6083F4E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>emptyExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2C36ECCF-FB6C-403B-B277-0D7BFCA4F325</key>
+		<string>https://github.com/Akira-Hayasaka/ofxRetroPixel.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>exampleRibbon/emptyExample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2C36ECCF-FB6C-403B-B277-0D7BFCA4F325</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Akira-Hayasaka/ofxRetroPixel.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2C36ECCF-FB6C-403B-B277-0D7BFCA4F325</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2C36ECCF-FB6C-403B-B277-0D7BFCA4F325</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxRetroPixel</string>
+		</dict>
+	</array>
+</dict>
+</plist>
